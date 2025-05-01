@@ -342,7 +342,7 @@ function aktipesan5() {
       waitUntilVisible: !![],
       lifelike: !![],
       afterComplete: function () {
-        (pesan5["innerHTML"] = vketik5 + "\x20><"),
+        (pesan5["innerHTML"] = vketik5 + "\x20"),
           setTimeout(aktipesan6, 0x320);
       },
     })["go"]();
