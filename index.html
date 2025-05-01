@@ -179,6 +179,33 @@
 }
 
     </script>
+
+    <script>
+    // ... (previous code remains the same)
+
+    async function inipesan() {
+        var { value: nama } = await swals.fire({
+            title: "Enter your name",
+            input: "text",
+        });
+        
+        // Modified condition to only accept "DAISY"
+        if (nama && nama.toUpperCase() === "DAISY") {  // Case-insensitive check
+            window.nama = nama;
+            vketikhalo = "Hii, " + nama + " ✨";
+            mulainama();
+        } else {
+            await swals.fire(
+                "Access Denied!",
+                "Only 'DAISY' is allowed! ❌"  // Changed error message
+            );
+            inipesan();
+        }
+    }
+
+    // ... (rest of the code remains the same)
+</script>
+    
     <script src="js/script.js"></script>
   
 
